@@ -1,0 +1,13 @@
+# Site settings
+title: Paul Sonnentag
+email: hello@paulsonnentag.com
+url: "paulsonnentag.com"
+twitter_username: brackcurly
+github_username:  brackcurly
+permalink: /post/:title
+
+sass:
+    style: :compressed
+
+# Build settings
+markdown: kramdown
