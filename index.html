@@ -2,22 +2,37 @@
 layout: default
 ---
 
-<div class="home">
+<div class="intro">
+  <div class="bio">
+    <h1>Paul Sonnentag</h1>
+    <p>
+      pasionate programmer, building things that matter ... if it's silly call it art
+    </p>
+    <ul class="bio-links">
+      <li class="bio-link github"><a href="//github.com/{{site.github_username}}">github</a></li>
+      <li class="bio-link twitter"><a href="//twitter.com/{{site.twitter_username}}">twitter</a></li>
+    </ul>
 
-  <h1 class="page-heading">Posts</h1>
+  </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  <a href="#project-list" class="scroll-arrow"></a>
+</div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<a name="project-list"></a>
+<div class="project-list">
+  {% for post in site.posts %}
+
+  <a href="{{post.url}}" class="project" style="background-image: url({{post.background}})">
+    <div class="project-info">
+      <h2>{{post.title}}</h2>
+    </div>
+  </a>
+
+  {% endfor %}
+</div>
+
+
+<div class="footer">
 
 </div>
