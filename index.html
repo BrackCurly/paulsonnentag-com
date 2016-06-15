@@ -16,11 +16,10 @@ layout: default
 
   </div>
 
-  <a href="#project-list" class="scroll-arrow"></a>
+  <a href="#project-list" class="scroll-arrow" data-scroll-smooth></a>
 </div>
 
-<a name="project-list"></a>
-<div class="project-list">
+<div class="project-list" id="project-list">
   {% for post in site.posts %}
 
   <a href="{{post.url}}"
@@ -35,8 +34,10 @@ layout: default
   {% endfor %}
 </div>
 
-<div class="footer">
-</div>
+<!--<div class="footer">
+  <h1>asdfs</h1>
+
+</div>-->
 
 <div id="modal-container" class="modal-container hidden"></div>
 <script src="src/script.js"></script>
