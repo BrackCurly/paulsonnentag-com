@@ -2,8 +2,13 @@
 <html>
   {% include head.html %}
   <body>
-    <h1><a href="/">paulsonnentag.com</a> / {{ page.title }}</h1>
+    <div>
 
-    {{ content }}
+      <a href="/#project-list" data-modal-close class="modal-close">X</a>
+
+      <h1><a href="/">paulsonnentag.com</a> / {{ page.title }}</h1>
+
+      {{ content }}
+    </div>
   </body>
 </html>
