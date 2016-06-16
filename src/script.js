@@ -3,6 +3,12 @@
 
   var selectedProject;
 
+  Array.prototype.slice.call(document.querySelectorAll('[data-full-screen]'))
+    .forEach(function (el) {
+      el.style.width = window.innerWidth + 'px';
+      el.style.height = window.innerHeight + 'px';
+    });
+
   addEventListener(document, 'click', 'a[data-scroll-smooth]', function (evt) {
     var scrollY;
     var id = evt.target.href.split('#')[1];
