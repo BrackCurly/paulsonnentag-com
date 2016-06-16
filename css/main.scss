@@ -31,10 +31,12 @@ html, body {
   height: 100%;
   font-family: Ubuntu, sans-serif;
   background: #222;
+  color: #fff;
 }
 
 a {
   color: #fff;
+  text-decoration: none;
 }
 
 .intro {
@@ -51,20 +53,20 @@ a {
 
 .bio {
   max-width: 500px;
-  color: #fff;
   background: rgba(0, 0, 0, 0.2);
   padding: 30px;
   border-radius: 3px;
 }
 
-.bio-links {
+.link-list {
   padding: 0;
   list-style: none;
   @include display(flex);
 
-  .bio-link {
+  .icon-link {
+    font-weight: bold;
     line-height: 24px;
-    vertical-align: center;
+    margin-right: 20px;
     @include display(flex);
     @include align-items(center);
 
@@ -86,7 +88,11 @@ a {
       background-size: 24px 24px;
     }
 
-    margin-right: 20px;
+    &.home:before {
+      background: url('../assets/icons/home.svg');
+      background-size: 24px 24px;
+    }
+
 
     &:last-child {
       margin-right: 0;
@@ -126,7 +132,7 @@ a {
   background: #fff;
 }
 
-.project {
+.project-thumbnail {
   height: 240px;
   min-width: 320px;
   background-size: cover;
@@ -154,11 +160,34 @@ a {
 }
 
 .modal {
+  position: relative;
   transition: all 0.3s ease-out;
   width: 100%;
   height: 100%;
   transform: translate3d(0, 0, 0);
-  background: #222;
+  background: rgba(34, 34, 34, 0.9);
+
+  .modal-close {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    width: 30px;
+    height: 30px;
+    background-image: url('../assets/icons/close.svg');
+    background-size: 30px 30px;
+  }
+
+  .modal-hidden {
+    display: none;
+  }
+}
+
+.project-page {
+  padding: 30px;
+}
+
+.project-title {
+  margin: 0 60px 0 0;
 }
 
 .hidden {

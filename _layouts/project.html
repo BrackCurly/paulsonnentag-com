@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
+
+
+  {{page.technologies}}
+
   <body>
-    <div>
+    <div class="project-page">
 
-      <a href="/#project-list" data-modal-close class="modal-close">X</a>
+      <a href="/#project-list" data-modal-close class="modal-close"></a>
 
-      <h1><a href="/">paulsonnentag.com</a> / {{ page.title }}</h1>
+      <h1 class="project-title">
+        <span class="modal-hidden">
+          <a class="modal-hidden" href="/#project-list">paulsonnentag.com</a> /
+        </span>
+        {{ page.title }}
+      </h1>
+
+      <ul class="link-list">
+        {% if page.repo != null %}
+        <li class="icon-link github"><a href="{{page.repo}}">repository</a></li>
+        {% endif %}
+        {% if page.website %}
+        <li class="icon-link home"><a href="{{page.website}}">website</a></li>
+        {% endif %}
+      </ul>
 
       {{ content }}
     </div>

@@ -3,9 +3,10 @@
 
   var selectedProject;
 
+  // setting fixed height is necessary because mobile chrome hides navbar while scrolling
+  // this leads to a jump in scroll position
   Array.prototype.slice.call(document.querySelectorAll('[data-full-screen]'))
     .forEach(function (el) {
-      el.style.width = window.innerWidth + 'px';
       el.style.height = window.innerHeight + 'px';
     });
 

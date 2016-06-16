@@ -9,9 +9,9 @@ layout: default
     <p>
       pasionate programmer, building things that matter ... if it's silly call it art
     </p>
-    <ul class="bio-links">
-      <li class="bio-link github"><a href="//github.com/{{site.github_username}}">github</a></li>
-      <li class="bio-link twitter"><a href="//twitter.com/{{site.twitter_username}}">twitter</a></li>
+    <ul class="link-list">
+      <li class="icon-link github"><a href="//github.com/{{site.github_username}}">github</a></li>
+      <li class="icon-link twitter"><a href="//twitter.com/{{site.twitter_username}}">twitter</a></li>
     </ul>
 
   </div>
@@ -23,7 +23,7 @@ layout: default
   {% for post in site.posts %}
 
   <a href="{{post.url}}"
-     class="project"
+     class="project-thumbnail"
      data-open-modal
      style="background-image: url({{post.background}})">
     <div class="project-info">
