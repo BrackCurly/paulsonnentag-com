@@ -2,6 +2,10 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+$background-color2: #2196f3;
+$background-color1: #03A9F4;
+$hightlight-color: #ffeb3b;
+
 @import "bourbon/bourbon";
 
 @keyframes bounce {
@@ -35,17 +39,18 @@ html, body {
 }
 
 a {
-  color: #fff;
+  color: $hightlight-color;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .intro {
   position: relative;
   width: 100%;
   height: 100%;
-  background: #FF5F6D; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #FF5F6D , #FFC371); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #FF5F6D , #FFC371); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: $background-color1; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, $background-color1, $background-color2); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, $background-color1 , $background-color2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   @include display(flex);
   @include justify-content(center);
   @include align-items(center);
@@ -53,7 +58,7 @@ a {
 
 .bio {
   max-width: 500px;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
   padding: 30px;
   border-radius: 3px;
 }
@@ -64,11 +69,15 @@ a {
   @include display(flex);
 
   .icon-link {
-    font-weight: bold;
+    font-size: 1.2em;
     line-height: 24px;
     margin-right: 20px;
     @include display(flex);
     @include align-items(center);
+
+    a {
+      color: #fff;
+    }
 
     &:before {
       width: 24px;
@@ -93,6 +102,10 @@ a {
       background-size: 24px 24px;
     }
 
+    &.youtube:before {
+      background: url('../assets/icons/social-youtube.svg');
+      background-size: 24px 24px;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -149,6 +162,12 @@ a {
   h2 {
     margin: 0;
   }
+}
+
+.project-description {
+  font-size: 1.1em;
+  line-height: 1.4em;
+  max-width: 700px;
 }
 
 .modal-container {

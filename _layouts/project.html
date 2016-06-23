@@ -18,15 +18,21 @@
       </h1>
 
       <ul class="link-list">
-        {% if page.repo != null %}
+        {% if page.repo %}
         <li class="icon-link github"><a href="{{page.repo}}">repository</a></li>
         {% endif %}
         {% if page.website %}
         <li class="icon-link home"><a href="{{page.website}}">website</a></li>
         {% endif %}
+        {% if page.video %}
+        <li class="icon-link youtube"><a href="{{page.video}}">video</a></li>
+        {% endif %}
       </ul>
 
-      {{ content }}
+      <div class="project-description">
+        {{ content }}
+      </div>
+
     </div>
   </body>
 </html>
