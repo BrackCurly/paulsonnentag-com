@@ -185,6 +185,7 @@ a {
   height: 100%;
   transform: translate3d(0, 0, 0);
   background: rgba(34, 34, 34, 0.9);
+  overflow: auto;
 
   .modal-close {
     position: absolute;
