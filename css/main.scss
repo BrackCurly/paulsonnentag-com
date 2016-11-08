@@ -107,6 +107,11 @@ a {
       background-size: 24px 24px;
     }
 
+    &.cv:before {
+      background: url('../assets/icons/cv.svg');
+      background-size: 24px 24px;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -168,6 +173,7 @@ a {
   font-size: 1.1em;
   line-height: 1.4em;
   max-width: 700px;
+  padding: 20px;
 }
 
 .modal-container {
@@ -212,4 +218,14 @@ a {
 
 .hidden {
   display: none;
+}
+
+.image-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  & > * {
+    margin: 20px 0 0 20px;
+  }
 }
