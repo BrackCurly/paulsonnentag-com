@@ -23,7 +23,6 @@
     }
   });
 
-
   Array.prototype.slice.call(document.querySelectorAll('a[data-open-modal]'))
     .forEach(function (el) {
 
@@ -70,8 +69,6 @@
 
   addEventListener(document, 'click', 'a[data-modal-close]', function (evt) {
     var modalContainer = document.getElementById('modal-container');
-
-
     var offset = selectedProject.getBoundingClientRect();
 
     var modal = document.getElementById('modal');

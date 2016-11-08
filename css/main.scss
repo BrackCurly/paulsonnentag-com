@@ -8,16 +8,50 @@ $hightlight-color: #ffeb3b;
 
 @import "bourbon/bourbon";
 
-@keyframes bounce {
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg)
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg)
+  }
+}
+
+@-webkit-keyframes bounce {
   0% {
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 
   50% {
+    -webkit-transform: translate3d(0, 10px, 0);
     transform: translate3d(0, 10px, 0);
   }
 
   100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 }
@@ -157,6 +191,28 @@ a {
   background-position: center;
   @include flex-grow(1);
   text-decoration: none;
+
+  &.loading {
+    position: relative;
+    display: block;
+
+    :after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50px;
+      height: 50px;
+      background-size: 40px 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: -25px 0 0 -25px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-image: url('../assets/icons/loader.svg');
+      @include animation(spin 1s linear infinite);
+    }
+  }
 }
 
 .project-info {
@@ -221,11 +277,14 @@ a {
 }
 
 .image-list {
-  display: flex;
-  flex-wrap: wrap;
+  @include display(flex);
+  @include flex-wrap(wrap);
   width: 100%;
 
   & > * {
+    width: 480px;
+    height: 320px;
+    background: #fff;
     margin: 20px 0 0 20px;
   }
 }
