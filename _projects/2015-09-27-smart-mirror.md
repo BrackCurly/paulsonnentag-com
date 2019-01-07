@@ -15,3 +15,9 @@ The smartphone is connected to a digital scale in front of the mirror. The scale
 Based on the weight it's also possible to differentiate between different user's and allow them to customize the
 information that is displayed for them, like their next appointment.
 </div>
+
+<br>
+
+<div class="image-list">
+  <img src="/assets/smart-mirror.png">
+</div>

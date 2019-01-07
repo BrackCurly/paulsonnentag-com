@@ -1,40 +1,32 @@
 ---
 layout: default
+title: Home
 ---
 
+{% include intro.html %}
 
-<div class="intro" data-full-screen>
-  <div class="bio">
-    <h1>Paul Sonnentag</h1>
-    <p>
-      Passionate developer, studying computer science. At home on the web - building things with JavaScript, Elm and Clojure.
-    </p>
-    <ul class="link-list">
-      <li class="icon-link github"><a href="//github.com/{{site.github_username}}">github</a></li>
-      <li class="icon-link twitter"><a href="//twitter.com/{{site.twitter_username}}">twitter</a></li>
-      <li class="icon-link resume"><a href="//paulsonnentag.github.io/resume/resume.html">resume</a></li>
-    </ul>
+<section class="post-list">
+  <div class="container">
+    <h4>Posts</h4>
+    {% assign sorted_posts = site.posts | reverse %}
+    {% for post in sorted_posts %}
+      <article class="post-item">
+        <span class="post-meta date-label">{{ post.date | date: "%b %d %Y" }}</span>
+        <div class="article-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a></div>
+      </article>
+    {% endfor %}
 
+    <br>
+
+    <h4>Previous Projects</h4>
+
+    {% assign sorted_projects = site.projects | reverse %}
+    {% for project in sorted_projects %}
+      <article class="post-item">
+        <span class="post-meta date-label">{{ project.date | date: "%b %d %Y" }}</span>
+        <div class="article-title"><a class="post-link" href="{{ project.url | prepend: site.baseurl | prepend: site.url }}">{{ project.title }}</a></div>
+      </article>
+    {% endfor %}
   </div>
 
-  <a href="#project-list" class="scroll-arrow" data-scroll-smooth></a>
-</div>
-
-<div class="project-list" id="project-list">
-  {% for post in site.posts %}
-
-  <a href="{{post.url}}"
-     class="project-thumbnail"
-     data-open-modal
-     style="background-image: url({{post.background}})">
-    <div class="project-info">
-      <h2>{{post.title}}</h2>
-    </div>
-  </a>
-
-  {% endfor %}
-</div>
-
-
-<div id="modal-container" class="modal-container hidden"></div>
-<script src="src/script.js"></script>
+</section>

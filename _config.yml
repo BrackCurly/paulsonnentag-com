@@ -1,14 +1,48 @@
 # Site settings
-title: Paul Sonnentag
-email: "paul.sonnentag@googlemail.com"
-url: "paulsonnentag.com"
-twitter_username: paulsonnentag
-github_username:  paulsonnentag
-permalink: /:title
+title    : "Paul Sonnentag"
+description   : personal blog"
+keywords      : ""
+url           : "http://paulsonnentag.com" # site url
+baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
+cover         : "" # image uri like logo/cover image for site seo
 
-sass:
-    sass_dir: _sass
-    style: :compressed
+google_analytics  : UA-XXXXX-XX
+twitter_username  : "paulsonnentag"
+comments_enabled  : false # if enabled (set to true), please provide your disqus_username
+disqus_shortname  : ""
+postshare_enabled : false
 
 # Build settings
-markdown: kramdown
+permalink   : /:title/
+markdown    : kramdown
+highlighter : rouge
+
+source      : ./
+destination : ./_site
+
+# Sass configuration
+sass:
+  sass_dir  : assets/scss
+  style     : compressed # expanded
+
+# Author settings
+author:
+  name     : "Paul Sonnentag"
+
+collections:
+  projects:
+    output: true
+
+plugins:
+  - jekyll-sitemap
+  - bourbon
+  - jekyll-paginate
+
+# navbar pages
+navbar:
+  - slug : about
+    title: About
+  - slug : blog
+    title: Blog
+
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md", "script"]

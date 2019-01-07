@@ -11,6 +11,8 @@ website: "http://robotopia.co/"
 Robotopia is a browser based programming environment for kids and young adults. The goal is to introduce kids to basic programming concepts with cute little robots.
 </div>
 
+<br>
+
 <div class="image-list">
-  <img src="assets/robotopia.png">
+  <img src="/assets/robotopia.png">
 </div>
