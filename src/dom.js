@@ -15,7 +15,7 @@ function addEvent (name, handlers) {
 
       const selectorList = handler.selectorList.slice(0)
 
-      let context = {}
+      let context = { $event: event }
       let selector = selectorList.pop()
 
       do {
@@ -170,6 +170,12 @@ class Selection {
     }
 
     return element.style[key]
+  }
+
+  scrollIntoView () {
+    this.first().scrollIntoView({ behavior: 'smooth' })
+
+    return this
   }
 }
 

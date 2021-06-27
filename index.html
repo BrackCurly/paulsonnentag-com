@@ -12,7 +12,6 @@
       window.onerror = () => {
         document.body.classList.remove('with-js')
       }
-
     </script>
 
 
@@ -151,6 +150,7 @@
 
           <div class="project-description" data-description>
 
+
             <!-- <iframe
               width="560" height="315"
               src="https://www.youtube.com/embed/D8ve7OZJXgw"
@@ -197,7 +197,8 @@
           <div class="project-description">
 
             <p>
-              This is a concept I developed as part of my <a href="papers/diy-information-software.pdf">bachelor thesis</a>.
+              This is a concept I developed as part of my
+              <a href="papers/diy-information-software.pdf">bachelor thesis</a>.
               The programming language was based around the idea that you can define concepts in a naturalistic language
               in form of a dictionary. Internally the statements are translated to Datalog predicates. For example
               the definition of an employee could look like this:
@@ -218,8 +219,9 @@
 
             <div class="garlang-definition">
               <p>The worked hours of an <i>employee</i> per month is a duration (monthly work time):</p>
-              <p>&nbsp;&nbsp;The employee works a duration (weekly work time) per week.<p>
-              <p>&nbsp;&nbsp;The monthly work time:  the weekly work time * 4</p>
+              <p>&nbsp;&nbsp;The employee works a duration (weekly work time) per week.
+              <p>
+              <p>&nbsp;&nbsp;The monthly work time: the weekly work time * 4</p>
             </div>
 
             <p>
@@ -261,15 +263,35 @@
 
         <h1>Programming in the physical world</h1>
 
-        <p>What if we could use natural language to program?</p>
+        <p>
+          In the beginning of 2018 I became obsessed with
+          <a href="http://worrydream.com/">Bret Victors</a> latest project
+          <a href="https://www.dynamicland.org/">Dynamicland</a>. From the outside you could only get
+          glimpses into what they where doing through the clips they posted on
+          <a href="https://twitter.com/dynamicland1">Twitter</a>. It seemed like a magical place pointing
+          in a radically new direction how computing could look like if it was part of our physical world
+          and we could create things
+        </p>
+
+        <p>
+          Since the whole point of Dynamicland is that it's a place you can't just download a piece of Software
+          and play with it. Therefore I decided I wanted to build my own version of Dynamicland at my university to play
+          with these ideas. There was already an existing project called
+          <a href="https://paperprograms.org/">Paper Programs</a>
+          that implemented some aspects of Dynamicland. I've used that as a basis to build on top of.
+        </p>
+
+        <p>
+          In September 2018 I also got the chance to visit Dynamicland for myself. This is where I created the query builder.
+        </p>
       </div>
 
       <div class="projects">
         <div class="project" tabindex="-1">
 
           <div class="project-header" data-project-link>
-            <h2 class="project-title">Query builder</h2>
-            <h3 class="project-date">2019</h3>
+            <h2 class="project-title">Query builder (at Dynamicland)</h2>
+            <h3 class="project-date">2018</h3>
           </div>
 
 
@@ -289,7 +311,7 @@
 
           <div class="project-header" data-project-link>
             <h2 class="project-title">Sound book</h2>
-            <h3 class="project-date">2019</h3>
+            <h3 class="project-date">2018</h3>
           </div>
 
 
@@ -301,6 +323,14 @@
 
           <div class="project-description">
 
+
+            <div class="youtube-video">
+
+
+            </div>
+
+
+            <p>An interactive book that let's you explore how sound works</p>
 
           </div>
         </div>
@@ -315,7 +345,6 @@
 
         <h1>Misc</h1>
 
-        <p>Other projects</p>
       </div>
 
       <div class="projects">
@@ -332,13 +361,29 @@
           >
 
           <div class="project-description">
+            <p>
+              Robotopia is a browser based programming environment for teaching basic programming concepts with cute little robots.
+            </p>
+
+            <a
+              href="https://www.youtube.com/watch?v=9aIa5Etqv5E"
+              class="youtube-video"
+              style="width: 560px; height: 315px; background-image: url('images/robotopia-video-placeholder.png')"
+              data-video-id="9aIa5Etqv5E"
+            ></a>
+
+            <p>
+              <a href="https://robotopia-x.github.io/">Website</a> |
+              <a href="https://github.com/robotopia-x/robotopia">Source code</a>
+            </p>
+
           </div>
         </div>
 
 
         <div class="project" tabindex="-1">
           <div class="project-header" data-project-link>
-            <h2 class="project-title">swip.js</h2>
+            <h2 class="project-title">Swip.js</h2>
             <h3 class="project-date">2017</h3>
           </div>
 
@@ -347,7 +392,41 @@
             src="images/swip-thumbnail.png"
             alt="interaction model of Garlang"
           >
+
           <div class="project-description">
+
+            <p>
+              I developed Swip.js together with my friend Tim as part of a hackathon. It's a library to create multi
+              device applications by giving smartphones the ability to be physically connected and know how they are
+              positioned to one another. This works with a simple swipe gesture which triggers an event on each device.
+              If the server detects two swipe events in opposite directions at the same time the two devices are connected
+              at the point where the swipe gesture was executed.
+            <p>
+              <b>Blob demo</b>
+            </p>
+
+            <a
+              href="https://www.youtube.com/watch?v=qXOwT0ieOgw"
+              class="youtube-video"
+              style="width: 560px; height: 315px; background-image: url('images/swip-blob-video-placeholder.png')"
+              data-video-id="qXOwT0ieOgw"
+            ></a>
+
+            <p>
+              <b>Golf demo</b>
+            </p>
+
+            <a
+              href="https://www.youtube.com/watch?v=ZE0gxa-p8HY"
+              class="youtube-video"
+              style="width: 560px; height: 315px; background-image: url('images/swip-golf-video-placeholder.png')"
+              data-video-id="ZE0gxa-p8HY"
+            ></a>
+
+            <p>
+              <a href="https://github.com/paulsonnentag/swip">Source code</a>
+            </p>
+
           </div>
         </div>
 
@@ -363,12 +442,20 @@
             alt="interaction model of Garlang"
           >
           <div class="project-description">
+            <p>
+              Logolino is an educational game teaches children the usage of articles in German.
+              I've developed it for my mom who is a <a href="https://www.xn--logopdiesonnentag-uqb.de/">speech therapist</a>.
+            </p>
+
+            <p>
+              <a href="https://github.com/paulsonnentag/logolino">Source code</a>
+            </p>
           </div>
         </div>
 
         <div class="project" tabindex="-1">
           <div class="project-header" data-project-link>
-            <h2 class="project-title">qwery.me</h2>
+            <h2 class="project-title">Qwery.me</h2>
             <h3 class="project-date">2015</h3>
           </div>
 
@@ -379,12 +466,20 @@
           >
 
           <div class="project-description">
+            <p>
+              Qwery.me is a graphical editor for querying <a href="https://www.wikidata.org/">Wikidata</a>.
+            </p>
+
+            <p>
+              <a href="http://paulsonnentag.github.io/qwery-me/">Website</a> |
+              <a href="https://github.com/paulsonnentag/qwery-me">Source code</a>
+            </p>
           </div>
         </div>
 
         <div class="project" tabindex="-1">
           <div class="project-header" data-project-link>
-            <h2 class="project-title">smart mirror</h2>
+            <h2 class="project-title">Smart mirror</h2>
             <h3 class="project-date">2015</h3>
           </div>
 
@@ -393,8 +488,29 @@
             src="images/smart-mirror-thumbnail.png"
             alt="interaction model of Garlang"
           >
+
           <div class="project-description">
+            <p>
+              I've developed smart mirror during a hackathon together with my team. The project is inspired by
+              <a href="https://magicmirror.builders/">Magic Mirror</a>. Instead of a Raspberry Pi we used an Android
+              smartphone which is placed behind a one-way mirror. The smartphone is connected to a digital scale in front
+              of the mirror. The scale tracks the users weight history. Based on the weight it's also possible to
+              differentiate between different user's and allow them to customize the information that is displayed for
+              them, like their next appointment.
+            </p>
+
+            <a
+              href="https://www.youtube.com/watch?v=LtVchsQsShU"
+              class="youtube-video"
+              style="width: 560px; height: 315px; background-image: url('images/smart-mirror-video-placeholder.png')"
+              data-video-id="LtVchsQsShU"
+            ></a>
+
+            <p>
+              <a href="">Source code</a>
+            </p>
           </div>
+
         </div>
       </div>
 
@@ -415,20 +531,25 @@
           projectGroup.$('.project.is-selected')
             .removeClass('is-selected')
 
-          project.addClass('is-selected')
+          project
+            .addClass('is-selected')
+            .scrollIntoView()
         })
 
       $('.youtube-video')
-        .onClick(({ youtubeVideo }) => {
+        .onClick(({ youtubeVideo, $event }) => {
+          $event.preventDefault()
 
-          youtubeVideo.setHtml(`
-            <iframe
-              width="100%" height="100%"
-              src="https://www.youtube.com/embed/${youtubeVideo.getData('youtubeUrl')}?rel=0&autoplay=1"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          `)
+          youtubeVideo
+            .addClass('is-loaded')
+            .setHtml(`
+              <iframe
+                width="100%" height="100%"
+                src="https://www.youtube.com/embed/${youtubeVideo.getData('videoId')}?rel=0&autoplay=1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            `)
         })
     </script>
 
