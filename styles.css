@@ -23,6 +23,10 @@ html {
   box-sizing: inherit;
 }
 
+a {
+  color: inherit;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
@@ -108,6 +112,10 @@ figcaption {
   margin: 0;
 }
 
+.page-header > *:last-child {
+  margin-bottom: 0;
+}
+
 .with-js .project-description {
   display: none;
 }
@@ -126,6 +134,10 @@ figcaption {
 
 .project-group-title {
   padding: 32px;
+}
+
+.project-group-title > *:last-child {
+  margin-bottom: 0;
 }
 
 .projects {
@@ -176,17 +188,11 @@ figcaption {
   width: 400px;
   height: 300px;
   cursor: pointer;
-}
-
-.project-thumbnail.stretch-height > img {
-  height: 100%;
-}
-
-.project-thumbnail.stretch-width > img {
-  width: 100%;
+  background: white;
 }
 
 .youtube-video {
+  background: #000;
   display: block;
   padding: 0;
   position: relative;
@@ -207,7 +213,18 @@ figcaption {
   margin-top: -25px;
 }
 
-.youtube-video.is-loaded:after {
+.youtube-video:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
+}
+
+.youtube-video.is-loaded:after,
+.youtube-video.is-loaded:before {
   display: none;
 }
 

@@ -14,13 +14,13 @@
       }
     </script>
 
-
     <div class="page-header">
       <h1>Paul Sonnentag</h1>
 
-      <a href="https://github.com/paulsonnentag">Github</a>
+      <p>
+      <a href="https://github.com/paulsonnentag">Github</a> |
       <a href="https://twitter.com/paulsonnentag">Twitter</a>
-
+      </p>
     </div>
 
     <div class="project-group">
@@ -50,14 +50,15 @@
           >
 
           <div class="project-description">
+            <p>
+              <b>Demo</b>
+            </p>
 
             <div
               class="youtube-video"
-              style="width: 560px; height: 315px;"
+              style="width: 560px; height: 315px; background-image: url('images/pluto-statechart-video-placeholder.png')"
               data-video-id="aHjZfQ_oklA"
-            >
-
-            </div>
+            ></div>
 
             <p>
               I was inspired by <a href="https://sketch.systems/">sketch.systems</a> a small tool that helps you
@@ -68,8 +69,8 @@
             </p>
 
             <figure>
-              <img src="images/plut-statechart-sketch-systems.png">
-              <figcaption>state chart of the possible states</figcaption>
+              <img width="400" src="images/pluto-statechart-sketch-systems.png">
+              <figcaption>sketch.system: state chart of the possible states</figcaption>
             </figure>
 
             <p>
@@ -79,9 +80,7 @@
 
             <figure>
               <img width="400" src="images/pluto-statechart-todo-example.png" alt="statechart of todo item">
-
               <figcaption>Example how the internal state of a todo item in a todo app could look like</figcaption>
-
             </figure>
           </div>
         </div>
@@ -94,17 +93,21 @@
 
           <img
             class="project-thumbnail"
-            src="images/pluto-data-transform-thumb.png"
+            src="images/pluto-data-transform-thumbnail.png"
             alt="visualization of data transform that filters for artworks by Van Gogh and groups them by year"
           >
 
           <div class="project-description">
-            <!-- <iframe
-              width="560" height="315"
-              src="https://www.youtube.com/embed/N_5KxKmvhlA?rel=0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe> -->
+            <p>
+              <b>Demo</b>
+            </p>
+
+            <a
+              href="https://www.youtube.com/watch?v=N_5KxKmvhlA"
+              class="youtube-video"
+              style="width: 560px; height: 500px; background-image: url('images/pluto-data-transform-video-placeholder.png')"
+              data-video-id="N_5KxKmvhlA"
+            ></a>
 
             <p>
               A live coding environment for data transformations. It always shows you the data that you're operating on
@@ -132,7 +135,6 @@
               alt="data transform with collapsed visualization"
             >
           </div>
-
         </div>
 
         <div class="project">
@@ -141,28 +143,22 @@
             <h3 class="project-date">2020</h3>
           </div>
 
-
           <img
             class="project-thumbnail"
             src="images/pluto-table-thumbnail.png"
           >
 
           <div class="project-description" data-description>
-
-
-            <!-- <iframe
-              width="560" height="315"
-              src="https://www.youtube.com/embed/D8ve7OZJXgw"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe> -->
-
-
             <p>
-              This project was
-
+              <b>Demo</b>
             </p>
 
+            <a
+              href="https://www.youtube.com/watch?v=D8ve7OZJXgw"
+              class="youtube-video"
+              style="width: 560px; height: 315px; background-image: url('images/pluto-table-video-placeholder.png')"
+              data-video-id="D8ve7OZJXgw"
+            ></a>
           </div>
         </div>
 
@@ -372,7 +368,9 @@
           >
 
           <div class="project-description">
-            <p>An interactive book that let's you explore how sound works</p>
+            <p>
+              <b>Demo</b>
+            </p>
 
             <a
               href="https://www.youtube.com/watch?v=9aIa5Etqv5E"
@@ -380,6 +378,8 @@
               style="width: 560px; height: 315px; background-image: url('images/paper-programs-sound-book-thumbnail.png')"
               data-video-id="9aIa5Etqv5E"
             ></a>
+
+            <p>An interactive book that let's you explore how sound works</p>
           </div>
         </div>
 
@@ -396,6 +396,11 @@
           >
 
           <div class="project-description">
+
+            <p>
+              <b>Demo</b>
+            </p>
+
             <a
               href="https://www.youtube.com/watch?v=s3NKREWLGGk"
               class="youtube-video"
@@ -439,6 +444,8 @@
 
         <h1>Misc</h1>
 
+        <p>more of my projects</p>
+
       </div>
 
       <div class="projects">
@@ -455,8 +462,9 @@
           >
 
           <div class="project-description">
+
             <p>
-              Robotopia is a browser based programming environment for teaching basic programming concepts with cute little robots.
+              <b>Demo</b>
             </p>
 
             <a
@@ -465,6 +473,10 @@
               style="width: 560px; height: 315px; background-image: url('images/robotopia-video-placeholder.png')"
               data-video-id="9aIa5Etqv5E"
             ></a>
+
+            <p>
+              Robotopia is a browser based programming environment for teaching basic programming concepts with cute little robots.
+            </p>
 
             <p>
               <a href="https://robotopia-x.github.io/">Website</a> |
@@ -490,12 +502,6 @@
           <div class="project-description">
 
             <p>
-              I developed Swip.js together with my friend Tim as part of a hackathon. It's a library to create multi
-              device applications by giving smartphones the ability to be physically connected and know how they are
-              positioned to one another. This works with a simple swipe gesture which triggers an event on each device.
-              If the server detects two swipe events in opposite directions at the same time the two devices are connected
-              at the point where the swipe gesture was executed.
-            <p>
               <b>Blob demo</b>
             </p>
 
@@ -516,6 +522,14 @@
               style="width: 560px; height: 315px; background-image: url('images/swip-golf-video-placeholder.png')"
               data-video-id="ZE0gxa-p8HY"
             ></a>
+
+            <p>
+              I developed Swip.js together with my friend Tim as part of a hackathon. It's a library to create multi
+              device applications by giving smartphones the ability to be physically connected and know how they are
+              positioned to one another. This works with a simple swipe gesture which triggers an event on each device.
+              If the server detects two swipe events in opposite directions at the same time the two devices are connected
+              at the point where the swipe gesture was executed.
+            </p>
 
             <p>
               <a href="https://github.com/paulsonnentag/swip">Source code</a>
@@ -585,12 +599,7 @@
 
           <div class="project-description">
             <p>
-              I've developed smart mirror during a hackathon together with my team. The project is inspired by
-              <a href="https://magicmirror.builders/">Magic Mirror</a>. Instead of a Raspberry Pi we used an Android
-              smartphone which is placed behind a one-way mirror. The smartphone is connected to a digital scale in front
-              of the mirror. The scale tracks the users weight history. Based on the weight it's also possible to
-              differentiate between different user's and allow them to customize the information that is displayed for
-              them, like their next appointment.
+              <b>Demo</b>
             </p>
 
             <a
@@ -599,6 +608,15 @@
               style="width: 560px; height: 315px; background-image: url('images/smart-mirror-video-placeholder.png')"
               data-video-id="LtVchsQsShU"
             ></a>
+
+            <p>
+              I've developed smart mirror during a hackathon together with my team. The project is inspired by
+              <a href="https://magicmirror.builders/">Magic Mirror</a>. Instead of a Raspberry Pi we used an Android
+              smartphone which is placed behind a one-way mirror. The smartphone is connected to a digital scale in front
+              of the mirror. The scale tracks the users weight history. Based on the weight it's also possible to
+              differentiate between different user's and allow them to customize the information that is displayed for
+              them, like their next appointment.
+            </p>
 
             <p>
               <a href="">Source code</a>
