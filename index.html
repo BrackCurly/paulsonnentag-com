@@ -1,32 +1,436 @@
----
-layout: default
-title: Home
----
+<!doctype html>
+<html lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <script>
+      document.body.classList.add('with-js')
 
-{% include intro.html %}
+      window.onerror = () => {
+        document.body.classList.remove('with-js')
+      }
 
-<section class="post-list">
-  <div class="container">
-    <h4>Log</h4>
-    {% assign sorted_posts = site.posts | reverse %}
-    {% for post in sorted_posts %}
-      <article class="post-item">
-        <span class="post-meta date-label">{{ post.date | date: "%b %d %Y" }}</span>
-        <div class="article-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a></div>
-      </article>
-    {% endfor %}
+    </script>
 
-    <br>
 
-    <h4>Previous Projects</h4>
+    <div class="page-header">
+      <h1>Paul Sonnentag</h1>
 
-    {% assign sorted_projects = site.projects | reverse %}
-    {% for project in sorted_projects %}
-      <article class="post-item">
-        <span class="post-meta date-label">{{ project.date | date: "%b %d %Y" }}</span>
-        <div class="article-title"><a class="post-link" href="{{ project.url | prepend: site.baseurl | prepend: site.url }}">{{ project.title }}</a></div>
-      </article>
-    {% endfor %}
-  </div>
+      <a href="https://github.com/paulsonnentag">Github</a>
+      <a href="https://twitter.com/paulsonnentag">Twitter</a>
 
-</section>
+    </div>
+
+
+    <div class="project-group">
+      <div class="project-group-title green-dark">
+
+        <h1>Programming through graphical interfaces</h1>
+
+        <p>
+          This is a project I've developed under the name <i>Pluto</i>. Originally the goal was to turn this
+          into a working product but over time I've realized the tremendous scope. So now it's a collection
+          of several prototypes that experiment with new graphical interfaces for building interactive applications.
+        </p>
+      </div>
+
+      <div class="projects">
+        <div class="project" tabindex="-1">
+
+          <div class="project-header" data-project-link>
+            <h2 class="project-title">Statechart prototype</h2>
+            <h3 class="project-date">2019</h3>
+          </div>
+
+          <img
+            class="project-thumbnail"
+            src="images/pluto-statechart-thumbnail.png"
+            alt="statechart of photo app"
+          >
+
+          <div class="project-description">
+
+            <div
+              class="youtube-video"
+              style="width: 560px; height: 315px;"
+              data-video-id="aHjZfQ_oklA"
+            >
+
+            </div>
+
+            <p>
+              I was inspired by <a href="https://sketch.systems/">sketch.systems</a> a small tool that helps you
+              to reason about the underlying states of complex applications with statecharts.
+              I liked the idea of having a single graphical representation that gives you a high level overview overview
+              of a complex system. Sketch.systems can be only used to create click dummies. With this prototype
+              I tried to do but with the goal that
+            </p>
+
+            <figure>
+              <img src="images/plut-statechart-sketch-systems.png">
+              <figcaption>state chart of the possible states</figcaption>
+            </figure>
+
+            <p>
+              One thing that would be interesting to explore further is to allow nested states by introducing the
+              concept of components that have their own internal state.
+            </p>
+
+            <figure>
+              <img width="400" src="images/pluto-statechart-todo-example.png" alt="statechart of todo item">
+
+              <figcaption>Example how the internal state of a todo item in a todo app could look like</figcaption>
+
+            </figure>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <h2 class="project-title">Data transformation prototype</h2>
+            <h3 class="project-date">2020</h3>
+          </div>
+
+          <img
+            class="project-thumbnail"
+            src="images/pluto-data-transform-thumb.png"
+            alt="visualization of data transform that filters for artworks by Van Gogh and groups them by year"
+          >
+
+          <div class="project-description">
+            <!-- <iframe
+              width="560" height="315"
+              src="https://www.youtube.com/embed/N_5KxKmvhlA?rel=0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe> -->
+
+            <p>
+              A live coding environment for data transformations. It always shows you the data that you're operating on
+              so you don't have to play computer in your head. List results are displayed in an abbreviated form where
+              the whole list is represented by one example item. This compact format gives the environment enough space
+              to show intermediate results so you can follow along multi step computations
+            </p>
+
+            <img
+              width="400"
+              src="images/pluto-data-transform-example.png"
+              alt=""
+            >
+
+            <p>
+              The dots indicate the number of items in a list an can also be used to navigate between them
+              They can also provide additional information here we can see that
+              that the second and third item have been filtered out
+              You can also collapse the graphical annotations so it takes the same space as a purely textual representation
+            </p>
+
+            <img
+              width="400"
+              src="images/pluto-data-transform-collapsed-example.png"
+              alt="data transform with collapsed visualization"
+            >
+          </div>
+
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <h2 class="project-title">Table prototype</h2>
+            <h3 class="project-date">2020</h3>
+          </div>
+
+
+          <img
+            class="project-thumbnail"
+            src="images/pluto-table-thumbnail.png"
+          >
+
+          <div class="project-description" data-description>
+
+            <!-- <iframe
+              width="560" height="315"
+              src="https://www.youtube.com/embed/D8ve7OZJXgw"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe> -->
+
+
+            <p>
+              This project was
+
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="project-group-details is-collapsed"></div>
+    </div>
+
+    <div class="project-group">
+      <div class="project-group-title yellow-dark">
+
+        <h1>Programming with natural language</h1>
+
+        <p>What if we could use natural language to program?</p>
+      </div>
+
+      <div class="projects">
+        <div class="project" tabindex="-1">
+
+          <div class="project-header" data-project-link>
+            <h2 class="project-title">Do-it-yourself information software</h2>
+            <h3 class="project-date">2019</h3>
+          </div>
+
+          <img
+            class="project-thumbnail"
+            src="images/garlang-thumbnail.png"
+            alt="interaction model of Garlang"
+          >
+
+          <div class="project-description">
+
+            <p>
+              This is a concept I developed as part of my <a href="papers/diy-information-software.pdf">bachelor thesis</a>.
+              The programming language was based around the idea that you can define concepts in a naturalistic language
+              in form of a dictionary. Internally the statements are translated to Datalog predicates. For example
+              the definition of an employee could look like this:
+            </p>
+
+            <div class="garlang-definition">
+              <h1>Employee <span class="plural">&lt;plural employees&gt;</span></h1>
+
+              <p>An employee has a name that is a text.</p>
+              <p>An employee works a duration per week.</p>
+              <p>An employee is assigned to many shifts.</p>
+            </div>
+
+            <p>
+              Existing definitions can be used to define new concepts. For example we can define the monthly work duration
+              based on the work duration per week like this:
+            </p>
+
+            <div class="garlang-definition">
+              <p>The worked hours of an <i>employee</i> per month is a duration (monthly work time):</p>
+              <p>&nbsp;&nbsp;The employee works a duration (weekly work time) per week.<p>
+              <p>&nbsp;&nbsp;The monthly work time:  the weekly work time * 4</p>
+            </div>
+
+            <p>
+              We can then use these definitions to ask questions about our knowledge model with searches.
+            </p>
+
+            <img src="images/garlang-employees-search.png" width="400">
+
+            <p>
+              The result of a search can be visualized in different ways, depending on the type of the result.
+              If we search for shifts we can either display them as a list or a calendar.
+            </p>
+
+            <img src="images/garlang-shift-search.png" width="800">
+
+
+            <p>
+              Multiple searches can be chained together to create adhoc tools to solve problems as they come up.
+              Here we chain together a search for shifts that haven't been fully assigned yet with a search
+              for employees that are available this week to figure out which employees need to be assigned.
+            </p>
+
+            <img src="images/garlang-shift-plan.png" width="850">
+
+
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="project-group-details is-collapsed"></div>
+
+    </div>
+
+
+    <div class="project-group">
+      <div class="project-group-title orange-dark">
+
+        <h1>Programming in the physical world</h1>
+
+        <p>What if we could use natural language to program?</p>
+      </div>
+
+      <div class="projects">
+        <div class="project" tabindex="-1">
+
+          <div class="project-header" data-project-link>
+            <h2 class="project-title">Query builder</h2>
+            <h3 class="project-date">2019</h3>
+          </div>
+
+
+          <img
+            class="project-thumbnail"
+            src="images/dynamicland-query-thumbnail.png"
+            alt="interaction model of Garlang"
+          >
+
+          <div class="project-description">
+
+
+          </div>
+        </div>
+
+        <div class="project" tabindex="-1">
+
+          <div class="project-header" data-project-link>
+            <h2 class="project-title">Sound book</h2>
+            <h3 class="project-date">2019</h3>
+          </div>
+
+
+          <img
+            class="project-thumbnail"
+            src="images/paper-programs-sound-book-thumbnail.png"
+            alt="interaction model of Garlang"
+          >
+
+          <div class="project-description">
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="project-group-details is-collapsed"></div>
+
+    </div>
+
+    <div class="project-group">
+      <div class="project-group-title red-dark">
+
+        <h1>Misc</h1>
+
+        <p>Other projects</p>
+      </div>
+
+      <div class="projects">
+        <div class="project" tabindex="-1">
+          <div class="project-header" data-project-link>
+            <h2 class="project-title">Robotopia</h2>
+            <h3 class="project-date">2017</h3>
+          </div>
+
+          <img
+            class="project-thumbnail"
+            src="images/robotopia-thumbnail.png"
+            alt="interaction model of Garlang"
+          >
+
+          <div class="project-description">
+          </div>
+        </div>
+
+
+        <div class="project" tabindex="-1">
+          <div class="project-header" data-project-link>
+            <h2 class="project-title">swip.js</h2>
+            <h3 class="project-date">2017</h3>
+          </div>
+
+          <img
+            class="project-thumbnail"
+            src="images/swip-thumbnail.png"
+            alt="interaction model of Garlang"
+          >
+          <div class="project-description">
+          </div>
+        </div>
+
+        <div class="project" tabindex="-1">
+          <div class="project-header" data-project-link>
+            <h2 class="project-title">Logolino</h2>
+            <h3 class="project-date">2016</h3>
+          </div>
+
+          <img
+            class="project-thumbnail"
+            src="images/logolino-thumbnail.png"
+            alt="interaction model of Garlang"
+          >
+          <div class="project-description">
+          </div>
+        </div>
+
+        <div class="project" tabindex="-1">
+          <div class="project-header" data-project-link>
+            <h2 class="project-title">qwery.me</h2>
+            <h3 class="project-date">2015</h3>
+          </div>
+
+          <img
+            class="project-thumbnail"
+            src="images/qwery-me-thumbnail.png"
+            alt="interaction model of Garlang"
+          >
+
+          <div class="project-description">
+          </div>
+        </div>
+
+        <div class="project" tabindex="-1">
+          <div class="project-header" data-project-link>
+            <h2 class="project-title">smart mirror</h2>
+            <h3 class="project-date">2015</h3>
+          </div>
+
+          <img
+            class="project-thumbnail"
+            src="images/smart-mirror-thumbnail.png"
+            alt="interaction model of Garlang"
+          >
+          <div class="project-description">
+          </div>
+        </div>
+      </div>
+
+      <div class="project-group-details is-collapsed"></div>
+
+    </div>
+
+
+    <script type="module">
+      import { $ } from './src/dom.js'
+
+      $('.project-group')
+        .onClick('.project', ({ project, projectGroup }) => {
+          projectGroup.$('.project-group-details')
+            .removeClass('is-collapsed')
+            .setHtml(project.$('.project-description'))
+
+          projectGroup.$('.project.is-selected')
+            .removeClass('is-selected')
+
+          project.addClass('is-selected')
+        })
+
+      $('.youtube-video')
+        .onClick(({ youtubeVideo }) => {
+
+          youtubeVideo.setHtml(`
+            <iframe
+              width="100%" height="100%"
+              src="https://www.youtube.com/embed/${youtubeVideo.getData('youtubeUrl')}?rel=0&autoplay=1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          `)
+        })
+    </script>
+
+  </body>
+</html>
