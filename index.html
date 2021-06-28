@@ -29,9 +29,8 @@
         <h1>Programming through graphical interfaces</h1>
 
         <p>
-          This is a project I've developed under the name <i>Pluto</i>. Originally the goal was to turn this
-          into a working product but over time I've realized the tremendous scope. So now it's a collection
-          of several prototypes that experiment with new graphical interfaces for building interactive applications.
+          This is a series of prototypes I've developed under the name Pluto.
+          My goal was to make programming more direct and concrete by replacing or augmenting static code with graphical interfaces.
         </p>
       </div>
 
@@ -46,7 +45,7 @@
           <img
             class="project-thumbnail"
             src="images/pluto-statechart-thumbnail.png"
-            alt="statechart of photo app"
+            alt="statechart of photo app with three screens: base, isUserSelected and isPhotoSelected"
           >
 
           <div class="project-description">
@@ -61,26 +60,37 @@
             ></div>
 
             <p>
-              I was inspired by <a href="https://sketch.systems/">sketch.systems</a> a small tool that helps you
-              to reason about the underlying states of complex applications with statecharts.
-              I liked the idea of having a single graphical representation that gives you a high level overview overview
-              of a complex system. Sketch.systems can be only used to create click dummies. With this prototype
-              I tried to do but with the goal that
+              I was inspired by <a href="https://sketch.systems/">sketch.systems</a>, a small tool that helps you reason
+              about the underlying states of complex applications with statecharts. I liked the idea of having a single
+              graphical representation that gives you a high-level overview of your application. With sketch.systems
+              you are limited to building click dummies. I wanted to use this paradigm and develop a tool for creating
+              real applications.
             </p>
 
             <figure>
-              <img width="400" src="images/pluto-statechart-sketch-systems.png">
-              <figcaption>sketch.system: state chart of the possible states</figcaption>
+              <img
+                width="400"
+                src="images/pluto-statechart-sketch-systems.png"
+                alt="
+                  A statechart for a search bar that has two high level states inactive and active.
+                  The active state has three sub states empty, text entry and result
+                "
+              >
+              <figcaption>statechart of a search bar in sketch.systems</figcaption>
             </figure>
 
             <p>
               One thing that would be interesting to explore further is to allow nested states by introducing the
-              concept of components that have their own internal state.
+              concept of components that have an internal state.
             </p>
 
             <figure>
-              <img width="400" src="images/pluto-statechart-todo-example.png" alt="statechart of todo item">
-              <figcaption>Example how the internal state of a todo item in a todo app could look like</figcaption>
+              <img
+                width="400"
+                src="images/pluto-statechart-todo-example.png"
+                alt="statechart of todo item"
+              >
+              <figcaption>example how the internal state of a todo item in a todo app could look like</figcaption>
             </figure>
           </div>
         </div>
@@ -94,7 +104,7 @@
           <img
             class="project-thumbnail"
             src="images/pluto-data-transform-thumbnail.png"
-            alt="visualization of data transform that filters for artworks by Van Gogh and groups them by year"
+            alt="visualization of data transform that selects all artworks by Van Gogh and groups them by year"
           >
 
           <div class="project-description">
@@ -110,23 +120,28 @@
             ></a>
 
             <p>
-              A live coding environment for data transformations. It always shows you the data that you're operating on
-              so you don't have to play computer in your head. List results are displayed in an abbreviated form where
-              the whole list is represented by one example item. This compact format gives the environment enough space
-              to show intermediate results so you can follow along multi step computations
+              A live coding environment for data transformations that always shows you the data on which you're operating.
+              The results of list operations are displayed in an abbreviated form where one example item represents the whole list.
+              This compact format gives the environment enough space to show intermediate results so you can trace back
+              unexpected results step by step.
             </p>
 
-            <img
-              width="400"
-              src="images/pluto-data-transform-example.png"
-              alt=""
-            >
+            <figure>
+              <img
+                width="400"
+                src="images/pluto-data-transform-example.png"
+                alt="vanGoghArtworksByYear: @artworks where { @artist name = 'Van Gogh' } groupBy: { @yearOfInception }"
+              >
+              <figcaption>
+                data transformation that selects Van Gogh's artworks and groups them by year
+              </figcaption>
+            </figure>
 
             <p>
-              The dots indicate the number of items in a list an can also be used to navigate between them
-              They can also provide additional information here we can see that
-              that the second and third item have been filtered out
-              You can also collapse the graphical annotations so it takes the same space as a purely textual representation
+              The dots indicate the number of items in a list and can also be used to navigate between them. The appearance
+              of the dots can also provide additional information. For example, we can see that the where operation filters
+              the second and third items out. You can also collapse the graphical annotations, so it takes the same space
+              as a purely textual representation.
             </p>
 
             <img
@@ -146,6 +161,7 @@
           <img
             class="project-thumbnail"
             src="images/pluto-table-thumbnail.png"
+            alt="nested table that shows artists with their artworks"
           >
 
           <div class="project-description" data-description>
@@ -165,7 +181,7 @@
       </div>
 
       <div class="project-group-details is-collapsed">
-        <button class="close-button"></button>
+        <button class="close-button" aria-label="close"></button>
         <div class="content"></div>
       </div>
     </div>
@@ -189,17 +205,21 @@
           <img
             class="project-thumbnail"
             src="images/garlang-thumbnail.png"
-            alt="interaction model of Garlang"
+            alt="
+              schematic sketch of the user model of Garlang, the user interacts with the knowledge model
+              which is represented as a dictionary through searches. Both the searches and the knowledge model
+              are changeable by the user.
+            "
           >
 
           <div class="project-description">
 
             <p>
-              This is a concept I developed as part of my
-              <a href="papers/diy-information-software.pdf">bachelor thesis</a>.
-              The programming language was based around the idea that you can define concepts in a naturalistic language
-              in form of a dictionary. Internally the statements are translated to Datalog predicates. For example
-              the definition of an employee could look like this:
+              "Do-it-yourself informationn software" is a concept I developed as part of my
+              <a href="papers/diy-information-software.pdf">bachelor thesis</a> with the
+              hypothetical programming language Garlang. The programming language was based on the idea that you can
+              define concepts in a naturalistic language in the form of a dictionary. Internally the statements are
+              translated to Datalog predicates. For example, the definition of an employee could look like this:
             </p>
 
             <div class="garlang-definition">
@@ -211,8 +231,8 @@
             </div>
 
             <p>
-              Existing definitions can be used to define new concepts. For example we can define the monthly work duration
-              based on the work duration per week like this:
+              We can use existing definitions to define new concepts. For example, we can define the monthly work
+              duration based on the work duration per week like this:
             </p>
 
             <div class="garlang-definition">
@@ -226,33 +246,48 @@
               We can then use these definitions to ask questions about our knowledge model with searches.
             </p>
 
-            <img src="images/garlang-employees-search.png" width="400">
+            <img
+              src="images/garlang-employees-search.png"
+              width="400"
+              alt="search for 'all employees', result is a list of employee names"
+            >
 
             <p>
               The result of a search can be visualized in different ways, depending on the type of the result.
-              If we search for shifts we can either display them as a list or a calendar.
+              If we search for shifts, we can either display them as a list or a calendar.
             </p>
 
-            <img src="images/garlang-shift-search.png" width="800">
-
+            <img
+              src="images/garlang-shift-search.png"
+              width="800"
+              alt="
+                Two searches for 'all shifts'. The left search is visualized as a list of shifts.
+                The right is visualized as a weekly calendar where the shifts are displayed as blocks in the calendar.
+              "
+            >
 
             <p>
-              Multiple searches can be chained together to create adhoc tools to solve problems as they come up.
+              Multiple searches can be chained together to create ad-hoc tools to solve problems as they come up.
               Here we chain together a search for shifts that haven't been fully assigned yet with a search
-              for employees that are available this week to figure out which employees need to be assigned.
+              for employees that are available this week to figure out which employees we need to assign.
             </p>
 
-            <img src="images/garlang-shift-plan.png" width="850">
-
+            <img
+              src="images/garlang-shift-plan.png"
+              width="850"
+              alt="
+                The first search for 'all shifts that are not fully assigned' is displayed as a calendar.
+                The second search for 'all employees that are available during the visible timeframe of the
+                shift search' is displayed as a list
+              "
+            >
 
           </div>
         </div>
-
-
       </div>
 
       <div class="project-group-details is-collapsed">
-        <button class="close-button"></button>
+        <button class="close-button" aria-label="close"></button>
         <div class="content"></div>
       </div>
 
