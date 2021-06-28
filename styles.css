@@ -19,6 +19,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -120,13 +121,23 @@ figcaption {
   display: none;
 }
 
-.project-group {
+.project-group-details {
+  position: relative;
 }
 
-.project-group-details {
+.project-group-details > .content {
   padding: 32px;
   overflow: auto;
-  position: relative;
+}
+
+
+.project-group-details img,
+.project-group-details .youtube-video,
+.project-group-details video,
+.project-description img,
+.project-description .youtube-video,
+.project-description video {
+  max-width: 100%;
 }
 
 .project-group-details.is-collapsed {
@@ -155,14 +166,37 @@ figcaption {
 }
 
 .projects {
-  display: flex;
-  overflow-x: auto;
-  overflow-y: initial;
+  overflow: auto;
 }
 
 .project {
-  position: relative;
   padding: 32px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.with-js .project {
+  overflow: inherit;
+  padding-right: 0;
+}
+
+.with-js .project:last-child {
+  padding-right: 32px;
+}
+
+.project-preview {
+  background: none;
+  border: 0;
+}
+
+.project-description {
+  padding: 32px;
+}
+
+.project-description > *:first-child {
+  margin-top: 0;
 }
 
 .project.is-selected:after {
@@ -180,10 +214,10 @@ figcaption {
 
 .project-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
-  margin-bottom: 8px;
+  margin: 8px 0;
   width: 400px;
 }
 
@@ -191,6 +225,7 @@ figcaption {
 .project-date {
   font-weight: normal;
   margin-bottom: 0;
+  text-align: left;
 }
 
 .project-date {
@@ -234,7 +269,7 @@ figcaption {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
 }
 
 .youtube-video.is-loaded:after,
@@ -257,4 +292,46 @@ figcaption {
 
 .garlang-definition > p {
   margin: 0;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  .project {
+    flex-direction: column;
+  }
+
+  .project-description {
+    padding: 0;
+  }
+
+  .project {
+    padding: 16px;
+  }
+
+  .project-thumbnail {
+    width: 300px;
+    height: 225px;
+  }
+
+  .project-header {
+    width: 300px;
+  }
+
+  .page-section {
+    padding: 16px
+  }
+
+  .project-group-title {
+    padding: 16px;
+  }
+
+  .project-group-details .content {
+    padding: 48px 16px 16px 16px;
+  }
+
+  .close-button {
+    top: 16px;
+    right: 16px;
+  }
 }
