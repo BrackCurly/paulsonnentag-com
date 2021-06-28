@@ -712,7 +712,7 @@
         .onClick('.project-group-details .close-button', ({ projectGroup, projectGroupDetails }) => {
           projectGroup.$('.project.is-selected').removeClass('is-selected')
           projectGroupDetails.addClass('is-collapsed')
-          projectGroupDetails.setHtml('')
+          projectGroupDetails.$('.content').setHtml('')
         })
 
       $('.youtube-video')
