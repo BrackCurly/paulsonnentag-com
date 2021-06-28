@@ -126,10 +126,24 @@ figcaption {
 .project-group-details {
   padding: 32px;
   overflow: auto;
+  position: relative;
 }
 
 .project-group-details.is-collapsed {
   display: none;
+}
+
+.close-button {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  background: url('icons/close.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
 }
 
 .project-group-title {

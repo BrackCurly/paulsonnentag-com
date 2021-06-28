@@ -75,7 +75,7 @@ class Selection {
   $ (cssSelector) {
     const fullCssSelector = (
       this._cssSelector
-        ?  this._cssSelector + cssSelector
+        ?  this._cssSelector + ' ' + cssSelector
         : cssSelector
     )
 

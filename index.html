@@ -164,7 +164,10 @@
 
       </div>
 
-      <div class="project-group-details is-collapsed"></div>
+      <div class="project-group-details is-collapsed">
+        <button class="close-button"></button>
+        <div class="content"></div>
+      </div>
     </div>
 
     <div class="project-group">
@@ -248,7 +251,10 @@
 
       </div>
 
-      <div class="project-group-details is-collapsed"></div>
+      <div class="project-group-details is-collapsed">
+        <button class="close-button"></button>
+        <div class="content"></div>
+      </div>
 
     </div>
 
@@ -435,7 +441,10 @@
         </div>
       </div>
 
-      <div class="project-group-details is-collapsed"></div>
+      <div class="project-group-details is-collapsed">
+        <button class="close-button"></button>
+        <div class="content"></div>
+      </div>
 
     </div>
 
@@ -626,7 +635,10 @@
         </div>
       </div>
 
-      <div class="project-group-details is-collapsed"></div>
+      <div class="project-group-details is-collapsed">
+        <button class="close-button"></button>
+        <div class="content"></div>
+      </div>
 
     </div>
 
@@ -639,16 +651,25 @@
 
       $('.project-group')
         .onClick('.project', ({ project, projectGroup }) => {
-          projectGroup.$('.project-group-details')
+
+          projectGroup
+            .$('.project-group-details')
             .removeClass('is-collapsed')
+            .$('.content')
             .setHtml(project.$('.project-description'))
 
-          projectGroup.$('.project.is-selected')
+          projectGroup
+            .$('.project.is-selected')
             .removeClass('is-selected')
 
           project
             .addClass('is-selected')
             .scrollIntoView()
+
+        })
+        .onClick('.project-group-details .close-button', ({ projectGroup, projectGroupDetails }) => {
+          projectGroup.$('.project.is-selected').removeClass('is-selected')
+          projectGroupDetails.addClass('is-collapsed')
         })
 
       $('.youtube-video')
