@@ -1,20 +1,57 @@
-:root {
-  --blue-font: hsl(185, 100%, 20%);
-  --blue-dark: hsl(185, 100%, 80%);
-  --blue-light: hsl(185, 100%, 90%);
-  --green-font: hsl(110, 100%, 20%);
-  --green-dark: hsl(110, 100%, 87%);
-  --green-light: hsl(110, 100%, 95%);
-  --yellow-font: hsl(62, 100%, 25%);
-  --yellow-dark: hsl(62, 100%, 86%);
-  --yellow-light: hsl(62, 100%, 92%);
-  --orange-font: hsl(33, 100%, 30%);
-  --orange-dark: hsl(33, 100%, 82%);
-  --orange-light: hsl(33, 100%, 90%);
-  --red-font: hsl(0, 100%, 30%);
-  --red-dark: hsl(0, 100%, 84%);
-  --red-light: hsl(0, 100%, 90%);
+.blue {
+  background: hsl(200, 87%, 82%);
+  color: hsl(200, 87%, 20%);
 }
+
+.green {
+  background: hsl(143, 62%, 89%);
+  color: hsl(143, 62%, 20%);
+}
+
+.yellow {
+  background: hsl(54, 91%, 86%);
+  color: hsl(54, 91%, 20%);
+}
+
+.pink {
+  background: hsl(332, 100%, 80%);
+  color: hsl(332, 100%, 20%);
+}
+
+.purple {
+  background: hsl(278, 82%, 87%);
+  color: hsl(278, 82%, 20%);
+}
+
+/*
+
+
+.blue1 {
+  color: #fff;
+  background: #03045e;
+}
+
+.blue2 {
+  color: #fff;
+  background: #023e8a;
+}
+
+.blue3 {
+  color: #fff;
+  background: #0077b6;
+}
+
+.blue4 {
+  color: #fff;
+  background: #0096c7;
+
+}
+
+.blue5 {
+  color: #fff;
+  background: #00b4d8;
+}
+ */
 
 html {
   box-sizing: border-box;
@@ -29,7 +66,7 @@ a {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Roboto, sans-serif;
   margin: 0;
 }
 
@@ -111,6 +148,7 @@ figcaption {
 
 .page-section > h1 {
   margin: 0;
+  font-weight: 100;
 }
 
 .page-section > *:last-child {
@@ -119,6 +157,11 @@ figcaption {
 
 .with-js .project-description {
   display: none;
+}
+
+.project-group h1 {
+  font-weight: 100;
+  font-size: 1.5em;
 }
 
 .project-group-details {
